@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.19/dist/css/uikit.min.css" />
+    <script src="https://kit.fontawesome.com/33e495fb35.js" crossorigin="anonymous"></script>
+    <link rel = 'stylesheet' href = 'style.css'>
+</head>
+<body>
+    <nav class="navbar navbar-dark " style = 'height: 100px'>
+        <div class="container-fluid">
+          <h2  style = 'color: #4f4f4f'>Nyaru Store</h2>
+          <i class="fas fa-cart-arrow-down"></i>
+          <form class="d-flex input-group w-auto">
+            <input
+              type="search"
+              class="form-control rounded"
+              placeholder="Search"
+              aria-label="Search"
+              aria-describedby="search-addon"
+            />
+            <span class="input-group-text border-0" id="search-addon">
+              <i class="fas fa-search"></i>
+            </span>
+          </form>
+          
+        </div>
+      </nav>
+      
+      <div class = 'container'>
+          <div class = 'row'>
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/choccolate_cake.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Choccolate Cake</h3>
+                      <h4 class="card-text">ksh600</h4>
+                      <a class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/green_shoe.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Green Shoe</h3>
+                      <h4 class="card-text">ksh700</h4>
+                      <a  class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/hamburger.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Hamburger</h3>
+                      <h4 class="card-text">ksh250</h4>
+                      <a class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+            
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/pink_shoe.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Pink Shoe</h3>
+                      <h4 class="card-text">ksh500</h4>
+                      <a class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/shirt.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">T Shirt</h3>
+                      <h4 class="card-text">ksh300</h4>
+                      <a class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+              <div class = 'col-md-4 col-lg-4'>
+                <div class="card" style="width: 18rem;">
+                    <img src="img/strawberry_cake.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h3 class="card-title">Strawberry Cake</h3>
+                      <h4 class="card-text">ksh600</h4>
+                      <a class="btn btn-primary">Add to Cart</a>
+                      <span class="heart-button" onclick="toggleLike(this)">&hearts;</span>
+                    </div>
+                  </div>
+              </div>
+
+        
+      </div>
+
+      
+      <div class="uk-overflow-auto container" style = 'width: 70%'>
+        <table class="uk-table uk-table-hover uk-table-middle uk-table-divider">
+            <thead>
+                <tr>
+                    <th class="uk-table-shrink"></th>
+                    <th class="uk-table-small sty"><h3>ITEM</h3></th>
+                    <th class="uk-table-small"></th>
+                    <th class="uk-width-small sty"><h3>PRICE</h3></th>
+                    <th class="uk-table-shrink uk-text-small sty"><h3>QUANTITY</h3></th>
+                    <th class="uk-table-shrink uk-text-small sty"><h3>TOTAL</h3></th>
+
+                </tr>
+            </thead>
+            <tbody>
+                
+          
+
+            </tbody>
+            <tr>
+              
+              <td><img class="uk-preserve-width uk-border-circle"  width="40" alt=""></td>
+              <td class="uk-table-link">
+                  <h3 class = "item-name"><strong>Grand-Total</strong></h3>
+              </td>
+              <td class="uk-text-truncate"><h3></h3></td>
+              <td class="uk-text-truncate"><h3></h3></td>
+              <td class="grand-total"><h3><strong>ksh0</strong></h3></td>
+            
+          </tr>
+        </table>
+    </div>
+
+    <footer style="background-color: #deded5;">
+      <div class="container p-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 mb-4">
+            <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">Managing Your Items</h5>
+            <p>
+              In your cart, you can easily manage the quantity of each item. Use the plus and minus buttons next to each product to increase or decrease the quantity. This allows you to adjust your order to fit your needs perfectly.
+            </p>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="mb-3" style="letter-spacing: 2px; color: #818963;">links</h5>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-1">
+                <a href="#!" style="color: #4f4f4f;">Frequently Asked Questions</a>
+              </li>
+              <li class="mb-1">
+                <a href="#!" style="color: #4f4f4f;">Delivery</a>
+              </li>
+              <li class="mb-1">
+                <a href="#!" style="color: #4f4f4f;">Pricing</a>
+              </li>
+              <li>
+                <a href="#!" style="color: #4f4f4f;">Where we deliver?</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <h5 class="mb-1" style="letter-spacing: 2px; color: #818963;">opening hours</h5>
+            <table class="table" style="color: #4f4f4f; border-color: #666;">
+              <tbody>
+                <tr>
+                  <td>Mon - Fri:</td>
+                  <td>8am - 9pm</td>
+                </tr>
+                <tr>
+                  <td>Sat - Sun:</td>
+                  <td>8am - 1am</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">nyaru shopping-cart</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+      <script src = 'script.js'></script>
+</body>
+</html>
+
